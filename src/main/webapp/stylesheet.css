@@ -1,0 +1,100 @@
+body {
+    font-family: Garamond, serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    background-image: url('file:///Users/meghanatummala/Downloads/survey_background.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #244388; 
+    opacity:.8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #244388; 
+    opacity:.9;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 5px;
+    font-weight: bold;
+    color: hwb(15 97% 1%);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+    background-color: #565e64;
+}
+
+/* Fading effect for the entire container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 2s;
+}

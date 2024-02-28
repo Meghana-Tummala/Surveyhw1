@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Survey Form</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <script src="cookie.js"></script>
+    <div class="container">
+        <h2>University Survey Form</h2>
+        <form id="surveyForm">
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                <input type="text" id="address" name="address" placeholder="Street Address" required>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+                <input type="text" id="zip" name="zip" placeholder="Zip" required>
+                <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="date" id="surveyDate" name="surveyDate" required>
+            </fieldset>
+
+            <!-- Campus Preferences Section -->
+            <fieldset>
+                <legend>What did you like most about the campus?</legend>
+                <label><input type="checkbox" name="campusPreference" value="students"> Students</label>
+                <label><input type="checkbox" name="campusPreference" value="location"> Location</label>
+                <label><input type="checkbox" name="campusPreference" value="campus"> Campus</label>
+                <label><input type="checkbox" name="campusPreference" value="atmosphere"> Atmosphere</label>
+                <label><input type="checkbox" name="campusPreference" value="dormRooms"> Dorm Rooms</label>
+                <label><input type="checkbox" name="campusPreference" value="sports"> Sports</label>
+            </fieldset>
+
+            <!-- Interest Source Section -->
+            <fieldset>
+                <legend>How did you become interested in the university?</legend>
+                <label><input type="radio" name="interestSource" value="friends" required> Friends</label>
+                <label><input type="radio" name="interestSource" value="television"> Television</label>
+                <label><input type="radio" name="interestSource" value="internet"> Internet</label>
+                <label><input type="radio" name="interestSource" value="other"> Other</label>
+            </fieldset>
+
+            <!-- Recommendation Likelihood Section -->
+            <fieldset>
+                <legend>Likelihood of Recommending This School</legend>
+                <select id="likelihood" name="likelihood" required>
+                    <option value="veryLikely">Very Likely</option>
+                    <option value="likely">Likely</option>
+                    <option value="unlikely">Unlikely</option>
+                </select>
+            </fieldset>
+
+            <!-- Raffle Section -->
+            <fieldset>
+                <legend>Raffle</legend>
+                <input type="text" id="raffle" name="raffle" placeholder="Enter at least ten comma separated numbers (1-100)" required>
+            </fieldset>
+
+            <!-- Additional Comments Section -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your comments"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label for="dataInput" style="color: white;">Enter numbers (separated by commas or spaces):</label>
+                <input type="text" id="dataInput" name="data" placeholder="e.g., 1, 2, 3">
+                <button type="button" onclick="calculateResults()">Calculate</button>
+            
+           
+                <p style="color: white;">Average: <span id="averageValue">N/A</span></p>
+                <p style="color: white;">Maximum: <span id="maximumValue">N/A</span></p>
+            </fieldset>
+              
+
+            <!-- Form Actions -->
+            <button type="submit">Submit</button>
+            <button type="button" onclick="resetForm()">Cancel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
